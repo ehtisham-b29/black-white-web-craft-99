@@ -1,21 +1,25 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Code, Smartphone, Globe } from "lucide-react";
-
 const Hero = () => {
-  return (
-    <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-hero text-primary-foreground relative overflow-hidden pt-16">
+  return <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-hero text-primary-foreground relative overflow-hidden pt-16">
       {/* Enhanced Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-20 left-20 w-32 h-32 border-2 border-primary-foreground/30 rounded-xl rotate-12 animate-pulse"></div>
-        <div className="absolute bottom-40 right-32 w-24 h-24 border-2 border-primary-foreground/30 rounded-full animate-pulse" style={{animationDelay: '1s'}}></div>
-        <div className="absolute top-1/2 right-20 w-16 h-16 border-2 border-primary-foreground/30 rotate-45 animate-pulse" style={{animationDelay: '2s'}}></div>
-        <div className="absolute bottom-20 left-1/4 w-20 h-20 border border-primary-foreground/20 rounded-lg rotate-45 animate-pulse" style={{animationDelay: '0.5s'}}></div>
+        <div className="absolute bottom-40 right-32 w-24 h-24 border-2 border-primary-foreground/30 rounded-full animate-pulse" style={{
+        animationDelay: '1s'
+      }}></div>
+        <div className="absolute top-1/2 right-20 w-16 h-16 border-2 border-primary-foreground/30 rotate-45 animate-pulse" style={{
+        animationDelay: '2s'
+      }}></div>
+        <div className="absolute bottom-20 left-1/4 w-20 h-20 border border-primary-foreground/20 rounded-lg rotate-45 animate-pulse" style={{
+        animationDelay: '0.5s'
+      }}></div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
         <div className="animate-fade-in">
           <div className="mb-8">
-            <span className="inline-block px-6 py-2 bg-primary-foreground/10 backdrop-blur-sm rounded-full text-sm font-medium text-primary-foreground/90 border border-primary-foreground/20">
+            <span className="inline-block bg-primary-foreground/10 backdrop-blur-sm rounded-full text-sm font-medium text-primary-foreground/90 border border-primary-foreground/20 mx-[20px] my-[20px] py-[10px] px-[10px]">
               🚀 Transforming Ideas into Digital Reality
             </span>
           </div>
@@ -50,7 +54,9 @@ const Hero = () => {
               <p className="text-primary-foreground/80 text-center leading-relaxed">Custom enterprise solutions built with cutting-edge technologies and scalable architecture</p>
             </div>
             
-            <div className="group flex flex-col items-center p-8 bg-primary-foreground/5 rounded-2xl backdrop-blur-sm border border-primary-foreground/10 hover:bg-primary-foreground/10 transition-all duration-500 hover:scale-105" style={{animationDelay: '0.2s'}}>
+            <div className="group flex flex-col items-center p-8 bg-primary-foreground/5 rounded-2xl backdrop-blur-sm border border-primary-foreground/10 hover:bg-primary-foreground/10 transition-all duration-500 hover:scale-105" style={{
+            animationDelay: '0.2s'
+          }}>
               <div className="p-4 bg-primary-foreground/10 rounded-2xl mb-6 group-hover:bg-primary-foreground/20 transition-all duration-300">
                 <Globe className="w-12 h-12 text-primary-foreground" />
               </div>
@@ -58,7 +64,9 @@ const Hero = () => {
               <p className="text-primary-foreground/80 text-center leading-relaxed">High-performance websites that engage users and convert visitors into customers</p>
             </div>
             
-            <div className="group flex flex-col items-center p-8 bg-primary-foreground/5 rounded-2xl backdrop-blur-sm border border-primary-foreground/10 hover:bg-primary-foreground/10 transition-all duration-500 hover:scale-105" style={{animationDelay: '0.4s'}}>
+            <div className="group flex flex-col items-center p-8 bg-primary-foreground/5 rounded-2xl backdrop-blur-sm border border-primary-foreground/10 hover:bg-primary-foreground/10 transition-all duration-500 hover:scale-105" style={{
+            animationDelay: '0.4s'
+          }}>
               <div className="p-4 bg-primary-foreground/10 rounded-2xl mb-6 group-hover:bg-primary-foreground/20 transition-all duration-300">
                 <Smartphone className="w-12 h-12 text-primary-foreground" />
               </div>
@@ -75,8 +83,6 @@ const Hero = () => {
           <div className="w-1 h-3 bg-primary-foreground/50 rounded-full mt-2"></div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;
