@@ -19,9 +19,7 @@ const Hero = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
         <div className="animate-fade-in">
           <div className="mb-8">
-            <span className="inline-block bg-primary-foreground/10 backdrop-blur-sm rounded-full text-sm font-medium text-primary-foreground/90 border border-primary-foreground/20 mx-[20px] my-[20px] py-[10px] px-[10px]">
-              🚀 Transforming Ideas into Digital Reality
-            </span>
+            
           </div>
           
           <h1 className="text-5xl md:text-6xl lg:text-8xl font-bold mb-8 leading-tight">
