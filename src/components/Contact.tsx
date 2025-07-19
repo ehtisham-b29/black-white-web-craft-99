@@ -14,8 +14,8 @@ const Contact = () => {
     {
       icon: Mail,
       title: "Email Us",
-      value: "hello@techforge.com",
-      link: "mailto:hello@techforge.com",
+      value: "hello@realzsolutions.com",
+      link: "mailto:hello@realzsolutions.com",
     },
     {
       icon: Phone,
@@ -69,7 +69,7 @@ const Contact = () => {
             </div>
 
             <Card className="p-6 bg-primary text-primary-foreground">
-              <h4 className="text-lg font-semibold mb-3">Why Choose TechForge?</h4>
+              <h4 className="text-lg font-semibold mb-3">Why Choose Realz Solutions?</h4>
               <ul className="space-y-2 text-sm text-primary-foreground/90">
                 <li>• Free initial consultation</li>
                 <li>• Transparent pricing</li>

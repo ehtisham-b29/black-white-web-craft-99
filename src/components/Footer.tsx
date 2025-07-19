@@ -19,7 +19,7 @@ const Footer = () => {
     { icon: Github, href: "#", label: "GitHub" },
     { icon: Linkedin, href: "#", label: "LinkedIn" },
     { icon: Twitter, href: "#", label: "Twitter" },
-    { icon: Mail, href: "mailto:hello@techforge.com", label: "Email" },
+    { icon: Mail, href: "mailto:hello@realzsolutions.com", label: "Email" },
   ];
 
   return (
@@ -29,7 +29,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 py-16">
           {/* Company Info */}
           <div className="md:col-span-2">
-            <h3 className="text-2xl font-bold mb-4">TechForge</h3>
+            <h3 className="text-2xl font-bold mb-4">Realz Solutions</h3>
             <p className="text-primary-foreground/80 mb-6 max-w-md leading-relaxed">
               Transforming businesses through innovative technology solutions. We build software, websites, and mobile applications that drive growth and success.
             </p>
@@ -81,7 +81,7 @@ const Footer = () => {
         <div className="border-t border-primary-foreground/20 py-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-primary-foreground/60 text-sm mb-4 md:mb-0">
-              © 2024 TechForge. All rights reserved.
+              © 2024 Realz Solutions. All rights reserved.
             </p>
             <div className="flex space-x-6 text-sm">
               <a href="/privacy-policy" className="text-primary-foreground/60 hover:text-primary-foreground transition-colors">

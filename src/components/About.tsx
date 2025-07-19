@@ -34,7 +34,7 @@ const About = () => {
         {/* Section Header */}
         <div className="text-center mb-20 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-            About TechForge
+            About Realz Solutions
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             We are a team of passionate developers, designers, and strategists dedicated to creating exceptional digital experiences that drive business growth.
@@ -79,7 +79,7 @@ const About = () => {
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
                 <div className="lg:col-span-2">
                   <p className="text-xl text-primary-foreground/90 mb-6 leading-relaxed">
-                    Founded with a vision to bridge the gap between technology and business needs, TechForge has grown into a trusted partner for companies looking to innovate and scale their digital presence.
+                    Founded with a vision to bridge the gap between technology and business needs, Realz Solutions has grown into a trusted partner for companies looking to innovate and scale their digital presence.
                   </p>
                   <p className="text-lg text-primary-foreground/80 leading-relaxed">
                     Our multidisciplinary team combines technical expertise with business acumen to deliver solutions that not only meet your current needs but also position you for future growth.

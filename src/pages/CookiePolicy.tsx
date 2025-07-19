@@ -314,7 +314,7 @@ const CookiePolicy = () => {
                       If you have any questions about our use of cookies, please contact us:
                     </p>
                     <div className="space-y-2 text-muted-foreground">
-                      <p>Email: privacy@techforge.com</p>
+                      <p>Email: privacy@realzsolutions.com</p>
                       <p>Phone: +1 (555) 123-4567</p>
                       <p>Address: 123 Tech Street, Innovation City, TC 12345</p>
                     </div>

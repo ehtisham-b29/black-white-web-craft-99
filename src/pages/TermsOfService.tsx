@@ -12,13 +12,13 @@ const TermsOfService = () => {
       id: "acceptance",
       title: "1. Acceptance of Terms",
       icon: Shield,
-      content: `By accessing and using TechForge's website and services, you acknowledge that you have read, understood, and agree to be bound by these Terms of Service. If you do not agree to these terms, please discontinue use of our services immediately.`
+      content: `By accessing and using Realz Solutions' website and services, you acknowledge that you have read, understood, and agree to be bound by these Terms of Service. If you do not agree to these terms, please discontinue use of our services immediately.`
     },
     {
       id: "services",
       title: "2. Our Services",
       icon: FileText,
-      content: `TechForge provides custom software development, web development, mobile application development, database solutions, cloud services, and security maintenance. All services are provided "as is" and subject to the specific terms outlined in individual service agreements.`
+      content: `Realz Solutions provides custom software development, web development, mobile application development, database solutions, cloud services, and security maintenance. All services are provided "as is" and subject to the specific terms outlined in individual service agreements.`
     },
     {
       id: "user-responsibilities",
@@ -30,7 +30,7 @@ const TermsOfService = () => {
       id: "intellectual-property",
       title: "4. Intellectual Property Rights",
       icon: Scale,
-      content: `All content, software, and materials provided by TechForge remain our intellectual property unless explicitly transferred through a separate agreement. Clients retain ownership of their data and custom developments created specifically for them, as outlined in project contracts.`
+      content: `All content, software, and materials provided by Realz Solutions remain our intellectual property unless explicitly transferred through a separate agreement. Clients retain ownership of their data and custom developments created specifically for them, as outlined in project contracts.`
     },
     {
       id: "privacy",
@@ -42,7 +42,7 @@ const TermsOfService = () => {
       id: "limitation-liability",
       title: "6. Limitation of Liability",
       icon: AlertTriangle,
-      content: `TechForge's liability is limited to the maximum extent permitted by law. We are not liable for indirect, incidental, or consequential damages. Our total liability shall not exceed the amount paid by the client for the specific service in question.`
+      content: `Realz Solutions' liability is limited to the maximum extent permitted by law. We are not liable for indirect, incidental, or consequential damages. Our total liability shall not exceed the amount paid by the client for the specific service in question.`
     },
     {
       id: "termination",
@@ -152,10 +152,10 @@ const TermsOfService = () => {
               <div className="space-y-12">
                 {/* Introduction */}
                 <Card className="p-8">
-                  <h2 className="text-2xl font-bold text-foreground mb-6">Welcome to TechForge</h2>
+                  <h2 className="text-2xl font-bold text-foreground mb-6">Welcome to Realz Solutions</h2>
                   <div className="prose prose-lg max-w-none">
                     <p className="text-muted-foreground leading-relaxed mb-4">
-                      These Terms of Service ("Terms") govern your use of TechForge's website, services, and applications. 
+                      These Terms of Service ("Terms") govern your use of Realz Solutions' website, services, and applications.
                       We've written these terms to be as clear and straightforward as possible, avoiding unnecessary legal jargon 
                       while ensuring we cover all the important aspects of our business relationship.
                     </p>
@@ -248,7 +248,7 @@ const TermsOfService = () => {
                       </Button>
                     </div>
                     <p className="text-sm text-muted-foreground mt-4">
-                      📧 legal@techforge.com • 📞 Available Monday-Friday, 9 AM - 6 PM
+                      📧 legal@realzsolutions.com • 📞 Available Monday-Friday, 9 AM - 6 PM
                     </p>
                   </div>
                 </Card>

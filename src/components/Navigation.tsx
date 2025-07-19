@@ -32,7 +32,7 @@ const Navigation = () => {
               onClick={handleHomeClick}
               className="text-2xl font-bold text-foreground hover:opacity-80 transition-opacity"
             >
-              TechForge
+              Realz Solutions
             </Link>
           </div>
 

@@ -77,7 +77,7 @@ const PrivacyPolicy = () => {
     }]
   }];
   const contactInfo = {
-    email: "privacy@techforge.com",
+    email: "privacy@realzsolutions.com",
     address: "123 Tech Street, Innovation City, TC 12345",
     phone: "+1 (555) 123-4567"
   };
