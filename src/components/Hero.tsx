@@ -3,7 +3,7 @@ import { ArrowRight, Code, Smartphone, Globe } from "lucide-react";
 
 const Hero = () => {
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-hero text-primary-foreground relative overflow-hidden">
+    <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-hero text-primary-foreground relative overflow-hidden pt-16">
       {/* Enhanced Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-20 left-20 w-32 h-32 border-2 border-primary-foreground/30 rounded-xl rotate-12 animate-pulse"></div>
