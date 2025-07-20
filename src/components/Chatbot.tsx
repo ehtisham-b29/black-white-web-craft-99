@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { MessageCircle, X, Send, Bot, User, Settings } from 'lucide-react';
+import { MessageCircle, X, Send, Bot, User } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card } from '@/components/ui/card';
@@ -15,7 +15,6 @@ interface Message {
 
 const Chatbot = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [showSettings, setShowSettings] = useState(false);
   const [messages, setMessages] = useState<Message[]>([
     {
       id: '1',
@@ -25,7 +24,6 @@ const Chatbot = () => {
     }
   ]);
   const [inputMessage, setInputMessage] = useState('');
-  const [apiKey, setApiKey] = useState(localStorage.getItem('gemini-api-key') || '');
   const [isLoading, setIsLoading] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
@@ -37,24 +35,8 @@ const Chatbot = () => {
     scrollToBottom();
   }, [messages]);
 
-  const saveApiKey = () => {
-    if (apiKey.trim()) {
-      localStorage.setItem('gemini-api-key', apiKey.trim());
-      setShowSettings(false);
-      toast.success('API key saved successfully!');
-    } else {
-      toast.error('Please enter a valid API key');
-    }
-  };
-
   const sendMessage = async () => {
     if (!inputMessage.trim()) return;
-    
-    if (!apiKey) {
-      toast.error('Please set your Gemini API key first');
-      setShowSettings(true);
-      return;
-    }
 
     const userMessage: Message = {
       id: Date.now().toString(),
@@ -68,7 +50,8 @@ const Chatbot = () => {
     setIsLoading(true);
 
     try {
-      const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=${apiKey}`, {
+      // TODO: Replace with backend API call that uses Gemini key
+      const response = await fetch(`/api/chat`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -145,51 +128,16 @@ const Chatbot = () => {
           <Bot className="w-5 h-5 text-primary" />
           <span className="font-semibold">AI Assistant</span>
         </div>
-        <div className="flex items-center gap-2">
-          <Button
-            variant="ghost"
-            size="icon"
-            className="w-8 h-8"
-            onClick={() => setShowSettings(!showSettings)}
-          >
-            <Settings className="w-4 h-4" />
-          </Button>
-          <Button
-            variant="ghost"
-            size="icon"
-            className="w-8 h-8"
-            onClick={() => setIsOpen(false)}
-          >
-            <X className="w-4 h-4" />
-          </Button>
-        </div>
+        <Button
+          variant="ghost"
+          size="icon"
+          className="w-8 h-8"
+          onClick={() => setIsOpen(false)}
+        >
+          <X className="w-4 h-4" />
+        </Button>
       </div>
 
-      {/* Settings Panel */}
-      {showSettings && (
-        <div className="p-4 border-b bg-muted/50">
-          <div className="space-y-2">
-            <label className="text-sm font-medium">Gemini API Key:</label>
-            <Input
-              type="password"
-              placeholder="Enter your Gemini API key"
-              value={apiKey}
-              onChange={(e) => setApiKey(e.target.value)}
-            />
-            <div className="flex gap-2">
-              <Button size="sm" onClick={saveApiKey}>
-                Save Key
-              </Button>
-              <Button size="sm" variant="outline" onClick={() => setShowSettings(false)}>
-                Cancel
-              </Button>
-            </div>
-            <p className="text-xs text-muted-foreground">
-              Get your API key from Google AI Studio
-            </p>
-          </div>
-        </div>
-      )}
 
       {/* Messages */}
       <ScrollArea className="flex-1 p-4">
