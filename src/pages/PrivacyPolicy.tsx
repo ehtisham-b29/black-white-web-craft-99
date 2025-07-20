@@ -107,12 +107,18 @@ const PrivacyPolicy = () => {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-bold text-foreground mb-8 text-center">Table of Contents</h2>
           <div className="grid md:grid-cols-2 gap-4">
-            {sections.map((section, index) => <a key={section.id} href={`#${section.id}`} className="flex items-center p-4 bg-card border border-border rounded-lg hover:bg-card-hover hover:border-border-strong transition-all duration-200 group">
+            {sections.map((section, index) => (
+              <a 
+                key={section.id} 
+                href={`#${section.id}`} 
+                className="flex items-center p-4 bg-card border border-border rounded-lg hover:bg-card-hover hover:border-border-strong transition-all duration-200 group"
+              >
                 <section.icon className="w-5 h-5 text-muted-foreground group-hover:text-foreground mr-3 flex-shrink-0" />
                 <span className="font-medium text-foreground group-hover:text-primary">
                   {index + 1}. {section.title}
                 </span>
-              </a>)}
+              </a>
+            ))}
           </div>
         </div>
       </section>
