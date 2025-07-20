@@ -1,18 +1,42 @@
 import { Github, Linkedin, Twitter, Mail } from "lucide-react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 const Footer = () => {
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const handleNavigationClick = (sectionId: string) => {
+    if (location.pathname === '/') {
+      // Already on home page, just scroll to section
+      scrollToSection(sectionId);
+    } else {
+      // Navigate to home page first, then scroll to section
+      navigate('/');
+      setTimeout(() => {
+        scrollToSection(sectionId);
+      }, 100);
+    }
+  };
+
   const quickLinks = [
-    { name: "Home", href: "#home" },
-    { name: "Services", href: "#services" },
-    { name: "About", href: "#about" },
-    { name: "Contact", href: "#contact" },
+    { name: "Home", sectionId: "home" },
+    { name: "Services", sectionId: "services" },
+    { name: "About", sectionId: "about" },
+    { name: "Contact", sectionId: "contact" },
   ];
 
   const services = [
-    "Software Development",
-    "Web Development", 
-    "Mobile Apps",
-    "Cloud Services",
+    { name: "Software Development", href: "/services/custom-software-development" },
+    { name: "Web Development", href: "/services/web-development" }, 
+    { name: "Mobile Apps", href: "/services/mobile-app-development" },
+    { name: "Cloud Services", href: "/services/cloud-services" },
   ];
 
   const socialLinks = [
@@ -53,12 +77,12 @@ const Footer = () => {
             <ul className="space-y-3">
               {quickLinks.map((link, index) => (
                 <li key={index}>
-                  <a
-                    href={link.href}
-                    className="text-primary-foreground/80 hover:text-primary-foreground transition-colors"
+                  <button
+                    onClick={() => handleNavigationClick(link.sectionId)}
+                    className="text-primary-foreground/80 hover:text-primary-foreground transition-colors text-left"
                   >
                     {link.name}
-                  </a>
+                  </button>
                 </li>
               ))}
             </ul>
@@ -69,8 +93,13 @@ const Footer = () => {
             <h4 className="text-lg font-semibold mb-4">Services</h4>
             <ul className="space-y-3">
               {services.map((service, index) => (
-                <li key={index} className="text-primary-foreground/80">
-                  {service}
+                <li key={index}>
+                  <Link
+                    to={service.href}
+                    className="text-primary-foreground/80 hover:text-primary-foreground transition-colors"
+                  >
+                    {service.name}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -84,15 +113,15 @@ const Footer = () => {
               © 2024 Realz Solutions. All rights reserved.
             </p>
             <div className="flex space-x-6 text-sm">
-              <a href="/privacy-policy" className="text-primary-foreground/60 hover:text-primary-foreground transition-colors">
+              <Link to="/privacy-policy" className="text-primary-foreground/60 hover:text-primary-foreground transition-colors">
                 Privacy Policy
-              </a>
-              <a href="/terms-of-service" className="text-primary-foreground/60 hover:text-primary-foreground transition-colors">
+              </Link>
+              <Link to="/terms-of-service" className="text-primary-foreground/60 hover:text-primary-foreground transition-colors">
                 Terms of Service
-              </a>
-              <a href="/cookie-policy" className="text-primary-foreground/60 hover:text-primary-foreground transition-colors">
+              </Link>
+              <Link to="/cookie-policy" className="text-primary-foreground/60 hover:text-primary-foreground transition-colors">
                 Cookie Policy
-              </a>
+              </Link>
             </div>
           </div>
         </div>
